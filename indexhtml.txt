@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matiyure Travels 20</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+    header {
+      background-color: #0033a0;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #ffd700;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0033a0;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+    nav a:hover {
+      transform: scale(1.1);
+    }
+    section.hero {
+      background-color: #e6f0ff;
+      padding: 40px;
+      text-align: center;
+    }
+    .hero h2 {
+      color: #0033a0;
+    }
+    .hero p {
+      font-size: 1.2em;
+    }
+    .services, .payment-methods, .booking-form, .social-media {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services h3, .payment-methods h3, .booking-form h3, .social-media h3 {
+      color: #0033a0;
+    }
+    footer {
+      background-color: #0033a0;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .methods {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    .method {
+      background: #ffd700;
+      padding: 15px;
+      border-radius: 10px;
+      color: #0033a0;
+      font-weight: bold;
+      width: 150px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .method:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    input, select, textarea, button {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      background-color: #0033a0;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background-color: #002080;
+      transform: scale(1.05);
+    }
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .social-icons a {
+      color: #0033a0;
+      font-size: 1.5em;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+    .venezuela-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .venezuela-gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .venezuela-gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Matiyure Travels 20</h1>
+    <p>Boletos Aéreos Nacionales e Internacionales</p>
+  </header>
+  
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#pagos">Métodos de Pago</a>
+    <a href="#reserva">Reserva</a>
+    <a href="#galeria">Venezuela</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section class="hero">
+    <h2>¡Viaja con nosotros al mejor precio!</h2>
+    <p>Compra tus boletos aéreos nacionales e internacionales de forma segura y rápida desde Venezuela.</p>
+  </section>
+
+  <section id="servicios" class="services">
+    <h3>Servicios</h3>
+    <ul>
+      <li>Venta de boletos aéreos nacionales</li>
+      <li>Venta de boletos aéreos internacionales</li>
+      <li>Asesoría personalizada para tu viaje</li>
+      <li>Promociones especiales y ofertas</li>
+    </ul>
+  </section>
+
+  <section id="pagos" class="payment-methods">
+    <h3>Métodos de Pago</h3>
+    <div class="methods">
+      <div class="method">Pago Móvil</div>
+      <div class="method">Transferencia Bancaria</div>
+      <div class="method">Zelle</div>
+      <div class="method">PayPal</div>
+      <div class="method">Efectivo (en oficina)</div>
+    </div>
+  </section>
+
+  <section id="reserva" class="booking-form">
+    <h3>Formulario de Reserva</h3>
+    <form action="mailto:Matiyuretravels2023@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
+      <input type="email" name="correo" placeholder="Correo electrónico" required>
+      <input type="tel" name="telefono" placeholder="Teléfono de contacto" required>
+      <select name="destino" required>
+        <option value="">Destino</option>
+        <option value="nacional">Nacional</option>
+        <option value="internacional">Internacional</option>
+      </select>
+      <textarea name="detalles" placeholder="Detalles del viaje (fechas, número de pasajeros, etc.)" required></textarea>
+      <button type="submit">Enviar Reserva</button>
+    </form>
+  </section>
+
+  <section id="galeria" class="venezuela-gallery">
+    <h3 style="text-align: center; color: #0033a0;">Paisajes de Venezuela</h3>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Salto_angel_2008.jpg" alt="Salto Ángel">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Los_Roques.jpg" alt="Los Roques">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Colonia_Tovar_-_Venezuela.jpg" alt="Colonia Tovar">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/M%C3%A9rida%2C_Venezuela.jpg" alt="Mérida">
+  </section>
+
+  <section class="social-media">
+    <h3>Síguenos en redes sociales</h3>
+    <div class="social-icons">
+      <a href="#" target="_blank">📘 Facebook</a>
+      <a href="#" target="_blank">📸 Instagram</a>
+      <a href="https://wa.me/58241504297" target="_blank">📱 WhatsApp: 0241-504297</a>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>&copy; 2025 Matiyure Travels 20 - Todos los derechos reservados</p>
+    <p>Contacto: Matiyuretravels2023@gmail.com</p>
+    <p>WhatsApp: 0241-504297</p>
+  </footer>
+</body>
+</html>
